@@ -1,0 +1,45 @@
+### Error Handling Testing
+POST http://localhost:4000/api
+
+### User Model Routes (Register a User)
+
+POST http://localhost:4000/api/user/register
+Content-Type: application/json
+
+{
+    "email": "abc4@gmail.com",
+    "firstname": "Sandeep",
+    "lastname": "Reddy",
+    "password": "123456",
+    "mobile": "5403546789",
+    "profession": "Software Developer" 
+}
+
+### Login in to the system
+POST http://localhost:4000/api/user/login
+Content-Type: application/json
+
+{
+    "email": "abc4@gmail.com",
+    "password": "123456"
+}
+
+### Get all users 
+GET http://localhost:4000/api/user/all-users
+
+
+### Update user profile 
+PUT http://localhost:4000/api/user/update-profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0OWUzZmZlZTk2MGUwMmExNDU4M2Q1OSIsImlhdCI6MTY4ODA5MjczMiwiZXhwIjoxNjg4MTc5MTMyfQ.jcV3XEJ1KwS_B-hMYg_zqSxQVOYcsHzqcy6gf8nJ5zY 
+
+{
+    "email": "abc@gmail.com",
+    "firstname": "Sandeep1",
+    "lastname": "Reddy",
+    "password": "123456",
+    "mobile": "5103546789",
+    "profession": "Software Developer"
+}
+
+
